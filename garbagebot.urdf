@@ -119,6 +119,7 @@
             <origin xyz="0 0 0" rpy="1.57 0 0"/>
             <geometry>
                 <mesh filename="package://trashbot/meshes/trashbot_wheel_v1.stl"/>
+            </geometry>
             <material name="dark"/>
         </visual>
 
@@ -152,7 +153,7 @@
             <inertia ixx="0.001" ixy="0.0" ixz="0.0"
                iyy="0.001" iyz="0.0"
                izz="0.001" />
-            </inertial>
+        </inertial>
     </link>
 
     <joint name="caster_back_left_joint" type="fixed">
