@@ -9,7 +9,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(urdf REQUIRED)
-find_package(ament_cmake REQUIRED)
 find_package(rviz2 REQUIRED)
 find_package(robot_state_publisher REQUIRED)
 
@@ -24,5 +23,13 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(DIRECTORY urdf
+  DESTINATION share/${PROJECT_NAME}/urdf
+)
 
 ament_package()
